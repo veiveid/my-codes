@@ -31,5 +31,6 @@ public class ConsoleThreadTest {
                 e.printStackTrace();
             }
         }
+        System.out.println("test");
     }
 }
