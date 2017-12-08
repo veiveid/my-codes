@@ -16,6 +16,9 @@ public class CallableAndFuture {
     public static void main(String[] args) throws Exception{
         ExecutorService service = Executors.newSingleThreadExecutor();
         Future<String> res = service.submit(new MyThread());
-        System.out.println(res.get());
+        service.shutdown();//关闭线程池
+        if(null != res.get())
+            System.out.println(res.get());
+
     }
 }
