@@ -15,8 +15,8 @@ public class DepartmentDaoImpl extends BaseDaoImpl<Department> implements Depart
     }
 
     @Override
-    public void deleteDepartmentById(Serializable id, String deleteMode) {
-        this.deleteEntryById(id);
+    public void deleteDepartmentById(Department department, String deleteMode) {
+        this.deleteEntryById(department,department.getId());
     }
 
     @Override
@@ -26,6 +26,6 @@ public class DepartmentDaoImpl extends BaseDaoImpl<Department> implements Depart
 
     @Override
     public Department getDepartmentById(Serializable id) {
-        return this.getEntryById(id);
+        return this.getEntryById(Department.class,id);
     }
 }

@@ -7,7 +7,7 @@ public interface DepartmentDao<T> extends BaseDao<T>{
     //对department操作的各种方法
     public void saveDepartment(Department department);
     public void updateDepartment(Department department);
-    public void deleteDepartmentById(Serializable id, String deleteMode);
+    public void deleteDepartmentById(Department department, String deleteMode);
     public Collection<Department> getAllDepartments();
-    public Department getDepartmentById(Serializable id);
+    public Department getDepartmentById(Department department);
 }

@@ -1,5 +1,7 @@
 package com.test.fan_xing.crud;
 
+import org.springframework.orm.hibernate3.HibernateTemplate;
+
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.Collection;
@@ -46,8 +48,8 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
     }
 
     @Override
-    public T getEntryById(Serializable id) {
-        return (T)this.hibernateTemplate.get(id);
+    public T getEntryById(T t,Serializable id) {
+        return (T)this.hibernateTemplate.get(t.getClass(),id);
     }
 
     @Override
@@ -62,8 +64,12 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
     }
 
     @Override
-    public void deleteEntryById(Serializable id) {
-        T t = this.getEntryById(id);
-        this.hibernateTemplate.delete(t);
+    public void deleteEntryById(T t,Serializable id) {
+        T t2 = this.getEntryById(t,id);
+        this.hibernateTemplate.delete(t2);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(1212);
     }
 }
