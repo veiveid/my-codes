@@ -2,7 +2,7 @@ package com.test.thread_local.demo1;
 
 public class TestThreadLocal {
 
-    ThreadLocal<String> threadLocal = new ThreadLocal<>();
+    ThreadLocal<String> threadLocal = new ThreadLocal<String>();
 
     public void test1(){
         String str = "123";

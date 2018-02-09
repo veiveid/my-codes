@@ -52,7 +52,7 @@ public class Apple {
     }
 
     public static void main(String[] args) {
-        List<Apple> appleList = new ArrayList<>();//存放apple对象集合
+        List<Apple> appleList = new ArrayList<Apple>();//存放apple对象集合
 
         Apple apple1 =  new Apple(1,"苹果1",new BigDecimal("3.25"),10);
         Apple apple12 = new Apple(1,"苹果2",new BigDecimal("1.35"),20);
