@@ -13,6 +13,7 @@ public class TestThreadLocal {
 
     public void test2(){
         System.out.println(threadLocal.get());
+        threadLocal.remove();
     }
 
     public static void main(String[] args) {
