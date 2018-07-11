@@ -36,5 +36,6 @@ public class CachedThreadPoolExecutorTest {
             MyThread myThread = new MyThread();
             cachedThreadPool.execute(myThread);
         }
+        cachedThreadPool.shutdown();
     }
 }
