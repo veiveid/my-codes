@@ -24,6 +24,6 @@ public class FixedThreadPoolExecutorTest {
                 }
             });
         }
-
+        fixedThreadPool.shutdown();
     }
 }
