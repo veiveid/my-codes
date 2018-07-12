@@ -19,7 +19,7 @@ public class GeneralManager extends Handler {
         }else{
             //如果还有后继的处理对象，继续传递
             if(getSuccessor() != null){
-                getSuccessor().handleFeeRequest(user,fee);
+               return getSuccessor().handleFeeRequest(user,fee);
             }
         }
         return str;

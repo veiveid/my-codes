@@ -17,7 +17,7 @@ public class DeptManager extends Handler {
         }else{
             //超过1000，继续传递给级别更高的人处理
             if(getSuccessor() != null){
-                getSuccessor().handleFeeRequest(user,fee);
+                return getSuccessor().handleFeeRequest(user,fee);
             }
         }
         return str;
